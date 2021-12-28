@@ -1,0 +1,14 @@
+{
+  "slug": "amethyst",
+  "name": "Amethyst",
+  "description": "Die Anwendung des Amethysts ist vielfältig. Beim Auflegen, entfaltet der Edelstein seine Wirkung sehr gut, wenn er direkt auf die betroffenen Stellen aufgelegt oder direkt am Körper getragen wird. Amethyst Wasser sollte auf nüchternen Magen getrunken und für die äußere Anwendung auf die Haut aufgetragen werden. Im Raum aufgestellt, wirken Drusen befreiend und reinigend auf den gesamten Raum. Bei der Anwendung sollte man auch die weiblichen und männlichen Kristalle unterscheiden, die ihre stärkste Wirkung jeweils auf das andere Geschlecht haben oder vorhandene Eigenschaften des eigenen Geschlechts verstärken.",
+  "images": ["/images/amethyst_02.jpeg", "/images/amethyst_01.jpeg"],
+  "data": {
+    "entity": "100",
+    "location": "Brasilien",
+    "density": 2.65,
+    "hardness": 7,
+    "formula": "SiO2+(Al, Fe, Ca, Mg, Li, Na)",
+    "zodiac": "Jungfrau, 24.08. bis 23.09."
+  }
+}
