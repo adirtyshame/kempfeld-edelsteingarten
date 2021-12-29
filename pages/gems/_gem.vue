@@ -6,8 +6,8 @@
 
 <script>
 export default {
-  async asyncData({ $content, params }) {
-    const gem = await $content(`gems/${params.gem}`).fetch()
+  async asyncData({ $content, params, i18n }) {
+    const gem = await $content(`gems/${i18n.locale}/${params.gem}`).fetch()
     return { gem }
   },
   data() {

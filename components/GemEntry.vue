@@ -12,14 +12,31 @@
       <v-card-text>
         <div class="d-flex flex-row">
           <div>
-            <v-card-title>{{ gem.name }}</v-card-title>
+            <v-card-title>
+              {{ gem.name }}
+              <v-spacer></v-spacer>
+              <v-btn
+                icon
+                @click="dialog = true"
+              >
+                <v-icon>mdi-qrcode</v-icon>
+              </v-btn>
+              <v-dialog 
+                v-model="dialog"
+                max-width="350"
+                transition="dialog-bottom-transition">
+                <v-card>
+                  <v-card-title>{{ gem.name }}<v-spacer></v-spacer><v-btn icon @click="dialog = false"><v-icon>mdi-close</v-icon></v-btn></v-card-title>
+                  <v-card-text>
+                    <vue-qr :text="url" qid="bergkristall" :size="300" :logo-src="'/icons/icon_64.png'" />
+                  </v-card-text>
+                </v-card>
+              </v-dialog>
+            </v-card-title>
             <v-card-subtitle style="text-align: justify">{{
               gem.description
             }}</v-card-subtitle>
           </div>
-          <v-list-item-avatar v-if="!$vuetify.breakpoint.mobile" tile size="80">
-            <vue-qr :text="url" qid="bergkristall" />
-          </v-list-item-avatar>
         </div>
         <v-list v-if="!!gem.data">
           <v-list-item v-for="(meta, i) in Object.keys(gem.data)" :key="i">
@@ -47,6 +64,12 @@ export default {
       type: String,
       // default: '',
       required: true,
+    },
+  },
+  data() {
+    return {
+      dialog: false,
     }
   },
-}</script>
+}
+</script>

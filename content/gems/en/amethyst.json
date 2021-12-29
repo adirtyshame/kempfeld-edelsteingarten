@@ -1,0 +1,14 @@
+{
+  "slug": "amethyst",
+  "name": "Amethyst",
+  "description": "The application of the amethyst is varied. When applied, the gemstone develops its effect very well when applied directly to the affected areas or worn directly on the body. Amethyst water should be drunk on an empty stomach and applied to the skin for external use. When placed in a room, druses have a liberating and cleansing effect on the entire room. In the application should also distinguish the female and male crystals, which have their strongest effect in each case on the opposite sex or strengthen existing properties of their own sex.",
+  "images": ["/images/amethyst_02.jpeg", "/images/amethyst_01.jpeg"],
+  "data": {
+    "entity": "100",
+    "location": "Brasilien",
+    "density": 2.65,
+    "hardness": 7,
+    "formula": "SiO2+(Al, Fe, Ca, Mg, Li, Na)",
+    "zodiac": "Virgin, 08/24 to 09/23"
+  }
+}

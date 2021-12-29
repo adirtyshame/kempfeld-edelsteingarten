@@ -25,7 +25,8 @@ Free entrance!
     zodiac: "Zodiac sign",
     location: "Location",
     formula: "chem. formula",
-    entity: "Entry"
+    entity: "Entry",
+    close: "close",
   },
   nav: {
     home: 'Welcome',

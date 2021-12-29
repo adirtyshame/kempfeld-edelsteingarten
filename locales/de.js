@@ -25,7 +25,8 @@ Freier Eintritt!
     zodiac: "Sternzeichen",
     location: "Fundort",
     formula: "chem. Formel",
-    entity: "Eintrag"
+    entity: "Eintrag",
+    close: "schließen",
   },
   nav: {
     home: 'Willkommen',

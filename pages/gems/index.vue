@@ -16,7 +16,7 @@ export default {
     }
   },
   async fetch() {
-    this.gems = await this.$content('gems')
+    this.gems = await this.$content(`gems/${this.$i18n.locale}`)
       .only(['slug', 'images', 'name', 'description'])
       .search(this.query)
       .sortBy('data.entity')

@@ -1,0 +1,14 @@
+{
+  "slug": "rosenquarz",
+  "name": "Rose quartz",
+  "description": "Rose quartz is already effective when it is placed in the room, because it can soften radiation in the room. As a fertility stone, it should be placed on the root chakra several times a week. Rose quartz also has many uses in the form of necklaces, pendants and as gemstone water. It is often found in gemstone mixtures, as it sensitizes the senses to other healing stones. Under the pillow of the beloved, it is said to strengthen love.",
+  "images": ["/images/rosenquarz_01.jpeg"],
+  "data": {
+    "entity": "51",
+    "location": "Madagaskar",
+    "density": 2.65,
+    "hardness": 6.7,
+    "formula": "SiO2",
+    "zodiac": "Stier, 21.04. bis 21.05."
+  }
+}
