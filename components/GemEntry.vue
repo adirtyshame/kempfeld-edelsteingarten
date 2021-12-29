@@ -16,6 +16,7 @@
               {{ gem.name }}
               <v-spacer></v-spacer>
               <v-btn
+                color="red lighten-2"
                 icon
                 @click="dialog = true"
               >
