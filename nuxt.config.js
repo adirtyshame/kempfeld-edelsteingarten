@@ -63,7 +63,6 @@ export default {
         ]
       }
     ],
-    'nuxt-route-meta',
     [
       '@nuxtjs/sitemap',
       {
