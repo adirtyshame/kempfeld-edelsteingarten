@@ -8,7 +8,7 @@
         :label="$t('settings.language')"
         item-value="code"
         item-text="name"
-        @input="$i18n.setLocale($event); $store.dispatch('app/updatePageTitle', $t('nav.settings'))"
+        @input="updateLocale"
       ></v-select>
     </v-card-text>
   </v-card>
@@ -33,6 +33,10 @@ export default {
     toggleTheme(value) {
       this.$vuetify.theme.dark = !!value
       localStorage.setItem('useDarkTheme', value.toString())
+    },
+    async updateLocale(locale) {
+      await this.$i18n.setLocale(locale)
+      this.$store.dispatch('app/updatePageTitle', this.$t('nav.settings'))
     },
   }
 }
