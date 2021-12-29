@@ -13,8 +13,8 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    titleTemplate: '%s - kempfeld-edelsteingarten',
-    title: 'kempfeld-edelsteingarten',
+    titleTemplate: '%s - Edelsteingarten',
+    title: 'Edelsteingarten',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -56,11 +56,28 @@ export default {
         lazy: true,
         langDir: '~/locales/',
         defaultLocale: 'de',
+        strategy: 'no_prefix',
         locales: [
-          { code: 'de', iso: 'de-DE', file: 'de.js', dir: 'ltr' },
+          { code: 'de', iso: 'de-DE', file: 'de.js', dir: 'ltr', name: 'Deutsch' },
+          { code: 'en', iso: 'en-US', file: 'en.js', dir: 'ltr', name: 'English' },
         ]
       }
-    ]
+    ],
+    'nuxt-route-meta',
+    [
+      '@nuxtjs/sitemap',
+      {
+        hostname: 'https://kempfeld-edelsteingarten.web.app',
+        gzip: true,
+        routes: [
+          '/',
+          '/gems',
+          '/gems/bergkristall',
+          '/gems/rosenquarz',
+          '/gems/amethyst',
+        ]
+      },
+    ],
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
@@ -73,13 +90,14 @@ export default {
   pwa: {
     manifest: {
       lang: 'en',
+      name: 'Kempfeld Edelsteingarten',
+      short_name: 'Edelsteingarten',
+      description: 'Der digitale Rudgang durch unsere hochkarätigen Einzelstücke'
     },
   },
 
   // Content module configuration: https://go.nuxtjs.dev/config-content
-  content: {
-    nestedProperties: ['gems.meta']
-  },
+  content: {},
 
   // Vuetify module configuration: https://go.nuxtjs.dev/config-vuetify
   vuetify: {

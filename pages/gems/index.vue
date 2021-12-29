@@ -1,47 +1,13 @@
 <template>
   <div>
-    <v-card class="mb-2">
-      <v-card-title>
-        {{ $t('gems.title') }}
-        <v-spacer></v-spacer>
-      </v-card-title>
-      <v-card-text>
-        {{ $t('gems.text') }}
-      </v-card-text>
-      <v-img src="/gallery/garten_02.jpeg" cover></v-img>
-      <v-card-subtitle>{{ $t('gems.subtitle') }}</v-card-subtitle>
-      <v-card-actions>
-        <v-text-field
-          v-model="query"
-          :label="$t('gems.searchLabel')"
-          outlined
-          clearable
-          dense
-          rounded
-          prepend-inner-icon="mdi-magnify"
-          class=""
-          @input="$fetch" />
-      </v-card-actions>
-    </v-card>
-    <v-card v-for="gem in gems" :key="gem.entryId" class="mb-2">
-      <v-list-item two-line :to="{path: `/gems/${gem.slug}`}">
-      <v-list-item-avatar tile>
-        <v-img :src="gem.images[0]"></v-img>
-      </v-list-item-avatar>
-        <v-list-item-content>
-          <v-list-item-title class="text-h5 mb-1">
-            {{ gem.name }}
-          </v-list-item-title>
-          <v-list-item-subtitle>{{ gem.description }}</v-list-item-subtitle>
-        </v-list-item-content>
-      </v-list-item>
-    </v-card>
+    <gems-intro :value="query" @search="search($event)" />
+    <gems-list :gems="gems" />
   </div>
 </template>
 
 <script>
 export default {
-  name: 'InspirePage',
+  name: 'GemsPage',
   data() {
     return {
       gems: [],
@@ -56,11 +22,20 @@ export default {
       .sortBy('data.entity')
       .fetch()
   },
+  head() {
+    return {
+      title: this.$t('nav.gems'),
+    }
+  },
+  mounted() {
+    this.$store.dispatch('app/updatePageTitle', this.$t('nav.gems'))
+  },
   methods: {
-    getGemUrl(gem) {
-      return `${window.location.origin}${gem.path}`
-    },
-  }
+    search(query) {
+      this.query = query
+      this.$fetch()
+    }
+  },
 }
 </script>
 
